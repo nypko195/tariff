@@ -1,0 +1,251 @@
+/*Обнуление*/
+body {
+   height: 100%;
+}
+*{padding:0;margin:0;border:0;}
+*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
+:focus,:active{outline:none;}
+a:focus,a:active{outline:none;}
+nav,footer,header,aside{display:block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display:none;}
+button{cursor:pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration:none;}
+a:hover{text-decoration:none;}
+ul li{list-style:none;}
+img{vertical-align:top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
+/*--------------------*/
+body {	
+	margin: 0 auto;
+	font-family: 'Roboto', sans-serif;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	background-color: #E5E5E5;
+}
+
+.fullscreen {
+	position: relative;
+	min-height: 100vh;
+	display: flex;
+	&__fon {
+		width: 100%;
+	}
+}
+
+.header {
+	width: 100%;
+	position: absolute;
+	z-index: 1;
+	display: flex;
+	background-color: rgba(253, 251, 251, 0.76);
+	justify-content: space-between;
+	padding: 20px 80px 20px 80px;
+	align-items: center;		
+
+		&__menu {
+			position: relative;			
+			list-style: none;
+			display: flex;			
+			& >li {
+				margin-right: 75px;
+			}
+			& li a {
+				font-size: 15px;
+				color: #000;
+				line-height: 20px;
+				
+			}
+			& li a:hover {
+				color: #3343E1;
+				text-decoration: underline;
+			}
+			& li:last-child {
+				margin: 0px;
+			}
+		}
+
+		&__menu>li:hover .header__menu-sub {			
+			display: block;	
+		}
+
+		&__menu-sub {
+			/*display: none;*/
+			background-color: #fff;
+			position: absolute;
+			z-index: 3;			
+			top: 47.8px;
+			left: -25px;			
+			border-bottom-left-radius: 20px;
+			border-bottom-right-radius: 20px;
+			& a {
+				display: flex;
+				padding: 10px 45px 10px 25px;				
+			}			
+			& li a:hover {
+				text-decoration: none;
+				width: 100%;
+				color: #fff;
+				background-color:  #3343E1;				
+			}
+			& li:nth-child(0):hover {
+				border-bottom-left-radius: 20px;
+				border-bottom-right-radius: 20px;
+			}
+						
+		}		
+
+		&__call {
+		}
+
+		&__call-btn {
+			background-color: #3343E1;
+			padding: 10px 24px 10px 24px;
+			color: #fff;
+			font-size: 13px;
+			border-radius: 20px;
+		}
+		&__call-btn:hover{
+			box-shadow: 0px 5px 76px -5px rgba(51, 67, 225, 0.45);
+		}	
+}
+
+.fullscreen {
+	position: relative;
+	display: flex;	
+	justify-content: center;	
+	&__bid {		
+		position: absolute;
+		z-index: 2;
+		top: 30%;
+	}
+
+	&__bid-content {		
+		background-color: #E1F1FF;
+		padding: 40px 140px;
+		text-align: center;
+		border-radius: 20px;
+	}
+
+	&__bid-title {
+		font-size: 20px;
+	}
+
+	&__bid-radio {
+		display: flex;			
+		margin: 30px 0 12px 0;		
+	}	
+
+	&__bid-input {
+		border-radius: 15px;		
+		display: flex;
+		margin: 18px 0px;
+		padding: 10px;
+		width: 100%;
+	}
+
+	&__bid-comments {
+		font-size: 12px;
+		text-align: left;
+	}
+
+	&__bid-btn {
+		padding: 10px 40px;
+		background-color: #3343E1;
+		border-radius: 30px;
+		color: #fff;
+		margin-top: 18px;
+	}
+	&__bid-btn:hover {
+		box-shadow: 0px 5px 76px -5px rgba(51, 67, 225, 0.45);
+	}
+}
+
+.tariffs {
+	margin: 0 auto;
+	padding-bottom: 50px;
+
+	&__title {
+		text-align: center;
+		margin: 30px;
+	}
+
+	&__row {
+		display: flex;
+	}
+
+	&__column {		
+		flex: 0 1 33.333%
+	}
+
+	&__column-item {
+		margin: 10px;
+		padding: 18px 20px 25px 20px;
+		background-color: #fff;
+		border-radius: 20px;
+		text-align: center;
+	}
+
+	&__column-item-subtitle {
+		font-size: 20px;
+		line-height: 27px;
+		text-decoration: underline;
+		margin-bottom: 22px;		
+	}
+
+	&__column-item-row {
+		display: flex;
+		margin: 0 -15px;
+	}
+
+	&__column-item-column {
+		flex: 1 0 50%;
+		padding: 0 15px;
+	}
+
+	&__column-item-row2 {
+		position: relative;
+		display: flex;
+		margin-top: 20px;
+		justify-content: center;
+		align-items: center;			
+	}
+
+	&__column-item-price {
+		font-size: 34px;
+		line-height: 46px;		
+	}
+
+	&__column-item-span {
+		
+	}
+	&__column-item-span::before{
+		content:'руб';					
+	}
+	&__column-item-span::after{
+		content:'мес';		
+	}
+
+	&__column-item-btn {
+		background:#3343E1;
+		border-radius: 20px;
+		color: #fff;
+		padding: 10px 25px;		
+	}
+	&__column-item-btn:hover{
+		box-shadow: 0px 5px 76px -5px rgba(51, 67, 225, 0.45);
+	}
+}
+.item {
+
+	&__logo1 {
+		margin-bottom: 20px;
+	}
+
+	&__content {
+		
+	}
+}
