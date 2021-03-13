@@ -18,234 +18,264 @@ ul li{list-style:none;}
 img{vertical-align:top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
 /*--------------------*/
-body {	
-	margin: 0 auto;
+body {
+	min-height: 100vh;	
 	font-family: 'Roboto', sans-serif;
 	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	background-color: #E5E5E5;
-}
-
-.fullscreen {
 	position: relative;
-	min-height: 100vh;
-	display: flex;
-	&__fon {
-		width: 100%;
-	}
+	background: #E5E5E5;
 }
 
 .header {
-	width: 100%;
-	position: absolute;
-	z-index: 1;
-	display: flex;
-	background-color: rgba(253, 251, 251, 0.76);
-	justify-content: space-between;
-	padding: 20px 80px 20px 80px;
-	align-items: center;		
+	background: url(/img/fon.png) no-repeat center;
+	background-size: cover;
+	min-height: 100vh;	
 
-		&__menu {
-			position: relative;			
-			list-style: none;
-			display: flex;			
-			& >li {
-				margin-right: 75px;
-			}
-			& li a {
-				font-size: 15px;
-				color: #000;
-				line-height: 20px;
-				
-			}
-			& li a:hover {
-				color: #3343E1;
-				text-decoration: underline;
-			}
-			& li:last-child {
-				margin: 0px;
-			}
-		}
+	&__top {		
+		height: 60px;
+		background-color: #ffffffb7;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		margin-bottom: calc(50vh - 255px);
 
-		&__menu>li:hover .header__menu-sub {			
-			display: block;	
-		}
-
-		&__menu-sub {
-			/*display: none;*/
-			background-color: #fff;
-			position: absolute;
-			z-index: 3;			
-			top: 47.8px;
-			left: -25px;			
-			border-bottom-left-radius: 20px;
-			border-bottom-right-radius: 20px;
-			& a {
-				display: flex;
-				padding: 10px 45px 10px 25px;				
-			}			
-			& li a:hover {
-				text-decoration: none;
-				width: 100%;
-				color: #fff;
-				background-color:  #3343E1;				
-			}
-			& li:nth-child(0):hover {
-				border-bottom-left-radius: 20px;
-				border-bottom-right-radius: 20px;
-			}
-						
-		}		
-
-		&__call {
-		}
-
-		&__call-btn {
-			background-color: #3343E1;
-			padding: 10px 24px 10px 24px;
-			color: #fff;
-			font-size: 13px;
-			border-radius: 20px;
-		}
-		&__call-btn:hover{
-			box-shadow: 0px 5px 76px -5px rgba(51, 67, 225, 0.45);
-		}	
-}
-
-.fullscreen {
-	position: relative;
-	display: flex;	
-	justify-content: center;	
-	&__bid {		
-		position: absolute;
-		z-index: 2;
-		top: 30%;
 	}
 
-	&__bid-content {		
-		background-color: #E1F1FF;
-		padding: 40px 140px;
-		text-align: center;
+	&__logo {
+		display: flex;
+		align-items: center;
+	}
+
+	&__logo-img {
+	}
+
+	&__logo-h1 {
+		padding-left: 10px;
+		font-size: 20px;
+		font-weight: 700;
+	}
+
+	&__menu {
+		&-list {	
+			width: 500px;
+			margin: 0px 30px;
+			display: flex;
+			justify-content: space-between;
+		}			
+	}
+
+
+	&__menu-btn {		
+	}	
+
+	&__menu-btn a {
+		font-size: 15px;
+		line-height: 20px;
+		color: #000;	
+	}
+
+	&__menu-btn a:hover {
+		color: #3343E1;
+	}
+
+	&__menu-sublist {
+		position: absolute;
+		top: 60px;
+		width: 200px;		
+		background: #fff;				
+		background-color: #fff;
+		border-bottom-left-radius: 20px;
+		border-bottom-right-radius: 20px;
+	}
+
+	&__menu-subitem {
+		padding: 8px 30px;		
+	}	
+
+	&__menu-subitem:hover {
+		background-color: #3343E1;		
+	}
+	&__menu-subitem:hover:last-child {
+		background-color: #3343E1;	
+		border-bottom-left-radius: 20px;
+		border-bottom-right-radius: 20px;	
+	}
+	
+	
+	&__menu-subitem a:hover {		
+		color: #fff;				
+	}
+
+	&__call-btn {
+		font-size: 13px;
+		line-height: 18px;
+		padding: 11px 40px;
+		
+	}
+
+	&__bid {			
+		display: flex;		
+		flex-direction: column;				
+		margin: 0 auto;
+		align-items: center;		
+		background: #E1F1FF;
 		border-radius: 20px;
+		max-width: 750px;
 	}
 
 	&__bid-title {
-		font-size: 20px;
+		margin: 40px 0 30px 0;
 	}
 
-	&__bid-radio {
-		display: flex;			
-		margin: 30px 0 12px 0;		
-	}	
+	&__bid-form {
+		text-align: center;
+		width: 470px;		
+	}
+
+	&__bid-radio {	
+		display: flex;	
+		justify-content: space-between;
+		margin-bottom: 23px;
+		
+	}
+	&__bid-radio-sort {
+		display: flex;
+		margin: 0 45px;
+	}
+
+	&__bid-radio-text {
+		line-height: 16px;
+	}
+
+	&__bid-radio-el {
+		margin-right: 10px;
+	}
 
 	&__bid-input {
-		border-radius: 15px;		
 		display: flex;
-		margin: 18px 0px;
-		padding: 10px;
-		width: 100%;
+		flex-direction: column;			
 	}
 
-	&__bid-comments {
+	&__bid-input-item {			
+		margin: 9px 0px;
+		font-size: 14px;
+		line-height: 16px;
+		color: #C4C4C4;
+		border-radius: 15px;
+		padding: 7px 0px 7px 10px;
+	}
+
+	&__bid-input-surely {
 		font-size: 12px;
-		text-align: left;
+		line-height: 14px;
+		margin: 3px 0 15px 0px;
 	}
 
 	&__bid-btn {
-		padding: 10px 40px;
-		background-color: #3343E1;
-		border-radius: 30px;
-		color: #fff;
-		margin-top: 18px;
+		margin-bottom: 45px;
+		padding: 11px 40px;
 	}
-	&__bid-btn:hover {
-		box-shadow: 0px 5px 76px -5px rgba(51, 67, 225, 0.45);
+
+	&__bg {		
+		background-image: url(/img/fon.png) no-repeat center center fixed;		
 	}
 }
-
+/*================================*/
 .tariffs {
-	margin: 0 auto;
-	padding-bottom: 50px;
+	background: #E5E5E5;
+	text-align: center;
+	margin: 0 250px;
 
 	&__title {
-		text-align: center;
-		margin: 30px;
+		margin: 20px 0;
 	}
 
 	&__row {
 		display: flex;
+		flex-wrap: wrap;
 	}
 
-	&__column {		
-		flex: 0 1 33.333%
-	}
-
-	&__column-item {
-		margin: 10px;
-		padding: 18px 20px 25px 20px;
+	&__item {
 		background-color: #fff;
 		border-radius: 20px;
-		text-align: center;
+		width: 32%;
+		margin-right: 1%;
+		margin-bottom: 20px;
 	}
+		
 
-	&__column-item-subtitle {
-		font-size: 20px;
-		line-height: 27px;
-		text-decoration: underline;
-		margin-bottom: 22px;		
+	&__item-subtitle {
+		padding: 19px 0 22px 0;
 	}
 
 	&__column-item-row {
 		display: flex;
+		justify-content: center;
 		margin: 0 -15px;
 	}
 
 	&__column-item-column {
-		flex: 1 0 50%;
 		padding: 0 15px;
 	}
-
+	
 	&__column-item-row2 {
-		position: relative;
-		display: flex;
-		margin-top: 20px;
+		display: flex;		
+		align-items: center;		
 		justify-content: center;
-		align-items: center;			
+		margin-bottom: 27px;
 	}
 
 	&__column-item-price {
 		font-size: 34px;
-		line-height: 46px;		
+		line-height: 46px;
 	}
 
 	&__column-item-span {
+		display: block;
+				
+	}
+	&__column-item-span hr {
+		align: center;
+		width: 20px;
+		color: #000;
 		
 	}
-	&__column-item-span::before{
-		content:'руб';					
+	&__column-item-span::before {
+		content: "руб";
 	}
-	&__column-item-span::after{
-		content:'мес';		
+	&__column-item-span::after {
+		content: "мес";
 	}
 
-	&__column-item-btn {
-		background:#3343E1;
-		border-radius: 20px;
-		color: #fff;
-		padding: 10px 25px;		
+	&__column-item-btn {		
+		padding: 11px 20px;
+		
+		margin-left: 15px;
 	}
-	&__column-item-btn:hover{
-		box-shadow: 0px 5px 76px -5px rgba(51, 67, 225, 0.45);
-	}
+}
+.title {
 }
 .item {
 
 	&__logo1 {
-		margin-bottom: 20px;
 	}
 
 	&__content {
-		
+		padding: 10px 0 15px 0;
 	}
+	
+}
+
+
+
+
+/*================================*/
+.btn {
+	background: #3343E1;
+	border-radius: 20px;
+	color: #fff;
+}
+.title {
+	font-size: 20px;
+	line-height: 27px;
 }

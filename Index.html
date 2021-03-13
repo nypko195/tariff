@@ -10,254 +10,249 @@
    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-   <!--main screen-->
-   <div class="fullscreen">
-      <!--bg-->
-      <img src="img/fon.png" alt="На столе ноутбук" class="fullscreen__fon">
-      <!--header-->
-      <header class="header">
-         <div class="header__logo">
-            <a href="">
-               <img src="img/header_logo.png" alt="">
-            </a>            
+   <!--header--> 
+   <header class="header">
+      <div class="header__top">
+         <div class="header__logo"><!--logo--> 
+            <img class="header__logo-img" src="img/logo_h.svg" alt="">
+            <h1 class="header__logo-h1">Тарифник</h1>
          </div>
-         <div class="header__menu">
-            <li>
-               <a href="">Домашний интернет</a>
-               <ul class="header__menu-sub">
-                  <li>
-                     <a href="">Для модема</a>
-                  </li>
-                  <li>
-                     <a href="">Для дачи и дома</a>
-                  </li>
-                  <li>
-                     <a href="">Для смартфона</a>
-                  </li>                  
-               </ul>
-            </li>
-            <li>
-               <a href="">Интернет и ТВ</a>
-            </li>
-            <li>
-               <a href="">Телевидение</a>
-            </li>
-         </div>
-         <div class="header__call">
-            <button class="header__call-btn">8 800 111 11 11</button>
-         </div>         
-      </header>
-      <!--bid window-->
-      <div class="fullscreen__bid">
-         <div class="fullscreen__bid-content">
-            <div class="fullscreen__bid-title">Заявка на подключение</div>
-            <p class="fullscreen__bid-radio"><input type="radio" name="choice">В квартиру</p>
-            <p class="fullscreen__bid-radio"><input type="radio" name="choice">В частный дом/офис</p>
-            <input class="fullscreen__bid-input" type="text" name="telephone" placeholder="Ваш телефон*">
-            <input class="fullscreen__bid-input" type="text" name="name" placeholder="Вашe имя">
-            <input class="fullscreen__bid-input" type="text" name="adress" placeholder="Адрес подключения">
-            <p class="fullscreen__bid-comments">Поля, отмеченные *, обязательны к заполнению</p>
-            <button class="fullscreen__bid-btn">Отправить заявку</button>
-         </div>
+         <div class="header__menu"><!--menu--> 
+            <ul class="header__menu-list">
+               <li class="header__menu-btn"><!--menu 1lvl--> 
+                  <a href="" class="">Домашний интернет</a>
+                  <ul class="header__menu-sublist">
+                     <li class="header__menu-subitem"><!--menu 2lvl--> 
+                        <a href="" class="">Для модема</a>
+                     </li>
+                     <li class="header__menu-subitem"><!--menu 2lvl--> 
+                        <a href="" class="">Для дома и дачи</a>
+                     </li>
+                     <li class="header__menu-subitem"><!--menu 2lvl--> 
+                        <a href="" class="">Для смартфона</a>
+                     </li>
+                  </ul>
+               </li>
+               <li class="header__menu-btn"><!--menu 1lvl--> 
+                  <a href="" class="">Интернет и ТВ</a>
+               </li>
+               <li class="header__menu-btn"><!--menu 1lvl--> 
+                  <a href="" class="">Телевидение</a>
+               </li>
+            </ul>
+         </div>        
+         <button class="header__call-btn btn">8 800 111 11 11</button><!--btn-->          
       </div>
-   </div>
-   <!--block2-->
+      <div class="header__bid"><!--сonnection requests--> 
+         <h2 class="header__bid-title title">Заявка на подключение</h2>
+         <form action="name" class="header__bid-form">
+            <label for="" class="header__bid-radio">
+               <label class="header__bid-radio-sort" for="">
+                  <input type="radio" name="choice" class="header__bid-radio-el" tabindex="1" checked>
+                  <p class="header__bid-radio-text">В квартиру</p>
+               </label>
+               <label class="header__bid-radio-sort" for="">
+                  <input type="radio" name="choice" class="header__bid-radio-el" tabindex="2">
+                  <p class="header__bid-radio-text">В частный дом/офис</p>
+               </label>               
+            </label>
+            <label for="" class="header__bid-input">
+               <input type="text" name="telephone"  class="header__bid-input-item" placeholder="Ваш телефон*" tabindex="3">
+               <input type="text" name="name" class="header__bid-input-item" placeholder="Ваше имя" tabindex="4">
+               <input type="text" name="adress" class="header__bid-input-item" placeholder="Адрес подключения" tabindex="5">
+               <p class="header__bid-input-surely">Поля, отмеченные *, обязательны к заполнению</p>
+            </label>
+            <button class="header__bid-btn btn">Отправить заявку</button>
+         </form>         
+      </div>      
+   </header>
+   <!--block 2-->  
    <section class="tariffs">
-      <div class="tariffs__title">Тарифы домашний интернет</div>
+      <h2 class="tariffs__title title">Тарифы домашний интернет</h2>
       <div class="tariffs__row">
-         <!--column1-->
-         <div class="tariffs__column">
-            <!--item 1-->
-            <div class="tariffs__column-item">
-               <div class="tariffs__column-item-subtitle">Объединяй!</div>
-               <div class="tariffs__column-item-row">
-                  <div class="tariffs__column-item-column">
-                     <img src="img/icon1.svg" alt="" class="item__logo1">
-                     <p class="item__content">До 100 Мбит/с</p>
-                  </div>
-                  <div class="tariffs__column-item-column">
-                     <img src="img/icon2.svg" alt="" class="item__logo1">
-                     <p class="item__content">140 каналов</p>
-                     <p class="item__content">20HD</p>
-                  </div>                  
+         <!--item 1--> 
+         <div class="tariffs__item">
+            <div class="tariffs__item-subtitle">Объединяй!</div>
+            <div class="tariffs__column-item-row">
+               <div class="tariffs__column-item-column">
+                  <img src="img/icon1.svg" alt="" class="item__logo1">
+                  <p class="item__content">До 100 Мбит/с</p>
                </div>
-               <div class="tariffs__column-item-row2">
-                  <div class="tariffs__column-item-price">899</div>
-                  <span class="tariffs__column-item-span"><hr></span>
-                  <button class="tariffs__column-item-btn">Подключить</button>
-               </div>
+               <div class="tariffs__column-item-column">
+                  <img src="img/icon2.svg" alt="" class="item__logo1">
+                  <p class="item__content">140 каналов</p>
+                  <p class="item__content">20HD</p>
+               </div>                  
             </div>
-            <!--item 2-->
-            <div class="tariffs__column-item">
-               <div class="tariffs__column-item-subtitle">Объединяй!</div>
-               <div class="tariffs__column-item-row">
-                  <div class="tariffs__column-item-column">
-                     <img src="img/icon1.svg" alt="" class="item__logo1">
-                     <p class="item__content">До 100 Мбит/с</p>
-                  </div>
-                  <div class="tariffs__column-item-column">
-                     <img src="img/icon2.svg" alt="" class="item__logo1">
-                     <p class="item__content">140 каналов</p>
-                     <p class="item__content">20HD</p>
-                  </div>                  
-               </div>
-               <div class="tariffs__column-item-row2">
-                  <div class="tariffs__column-item-price">899</div>
-                  <span class="tariffs__column-item-span"><hr></span>
-                  <button class="tariffs__column-item-btn">Подключить</button>
-               </div>
+            <hr>
+            <div class="tariffs__column-item-row2">
+               <div class="tariffs__column-item-price">899</div>
+               <span class="tariffs__column-item-span"><hr/></span>
+               <button class="tariffs__column-item-btn btn">Подключить</button>
             </div>
-            <!--item 3-->
-            <div class="tariffs__column-item">
-               <div class="tariffs__column-item-subtitle">Объединяй!</div>
-               <div class="tariffs__column-item-row">
-                  <div class="tariffs__column-item-column">
-                     <img src="img/icon1.svg" alt="" class="item__logo1">
-                     <p class="item__content">До 100 Мбит/с</p>
-                  </div>
-                  <div class="tariffs__column-item-column">
-                     <img src="img/icon2.svg" alt="" class="item__logo1">
-                     <p class="item__content">140 каналов</p>
-                     <p class="item__content">20HD</p>
-                  </div>                  
+         </div>  
+         <!--item 2--> 
+         <div class="tariffs__item">
+            <div class="tariffs__item-subtitle">Объединяй!</div>
+            <div class="tariffs__column-item-row">
+               <div class="tariffs__column-item-column">
+                  <img src="img/icon1.svg" alt="" class="item__logo1">
+                  <p class="item__content">До 100 Мбит/с</p>
                </div>
-               <div class="tariffs__column-item-row2">
-                  <div class="tariffs__column-item-price">899</div>
-                  <span class="tariffs__column-item-span"><hr></span>
-                  <button class="tariffs__column-item-btn">Подключить</button>
-               </div>
+               <div class="tariffs__column-item-column">
+                  <img src="img/icon2.svg" alt="" class="item__logo1">
+                  <p class="item__content">140 каналов</p>
+                  <p class="item__content">20HD</p>
+               </div>                  
             </div>
-         </div>
-         <!--column2-->
-         <div class="tariffs__column">
-            <!--item 1-->
-            <div class="tariffs__column-item">
-               <div class="tariffs__column-item-subtitle">Объединяй!</div>
-               <div class="tariffs__column-item-row">
-                  <div class="tariffs__column-item-column">
-                     <img src="img/icon1.svg" alt="" class="item__logo1">
-                     <p class="item__content">До 100 Мбит/с</p>
-                  </div>
-                  <div class="tariffs__column-item-column">
-                     <img src="img/icon2.svg" alt="" class="item__logo1">
-                     <p class="item__content">140 каналов</p>
-                     <p class="item__content">20HD</p>
-                  </div>                  
-               </div>
-               <div class="tariffs__column-item-row2">
-                  <div class="tariffs__column-item-price">899</div>
-                  <span class="tariffs__column-item-span"><hr></span>
-                  <button class="tariffs__column-item-btn">Подключить</button>
-               </div>
+            <div class="tariffs__column-item-row2">
+               <div class="tariffs__column-item-price">899</div>
+               <span class="tariffs__column-item-span"><hr></span>
+               <button class="tariffs__column-item-btn btn">Подключить</button>
             </div>
-            <!--item 2-->
-            <div class="tariffs__column-item">
-               <div class="tariffs__column-item-subtitle">Объединяй!</div>
-               <div class="tariffs__column-item-row">
-                  <div class="tariffs__column-item-column">
-                     <img src="img/icon1.svg" alt="" class="item__logo1">
-                     <p class="item__content">До 100 Мбит/с</p>
-                  </div>
-                  <div class="tariffs__column-item-column">
-                     <img src="img/icon2.svg" alt="" class="item__logo1">
-                     <p class="item__content">140 каналов</p>
-                     <p class="item__content">20HD</p>
-                  </div>                  
+         </div> 
+         <!--item 3-->
+         <div class="tariffs__item">
+            <div class="tariffs__item-subtitle">Объединяй!</div>
+            <div class="tariffs__column-item-row">
+               <div class="tariffs__column-item-column">
+                  <img src="img/icon1.svg" alt="" class="item__logo1">
+                  <p class="item__content">До 100 Мбит/с</p>
                </div>
-               <div class="tariffs__column-item-row2">
-                  <div class="tariffs__column-item-price">899</div>
-                  <span class="tariffs__column-item-span"><hr></span>
-                  <button class="tariffs__column-item-btn">Подключить</button>
-               </div>
+               <div class="tariffs__column-item-column">
+                  <img src="img/icon2.svg" alt="" class="item__logo1">
+                  <p class="item__content">140 каналов</p>
+                  <p class="item__content">20HD</p>
+               </div>                  
             </div>
-            <!--item 3-->
-            <div class="tariffs__column-item">
-               <div class="tariffs__column-item-subtitle">Объединяй!</div>
-               <div class="tariffs__column-item-row">
-                  <div class="tariffs__column-item-column">
-                     <img src="img/icon1.svg" alt="" class="item__logo1">
-                     <p class="item__content">До 100 Мбит/с</p>
-                  </div>
-                  <div class="tariffs__column-item-column">
-                     <img src="img/icon2.svg" alt="" class="item__logo1">
-                     <p class="item__content">140 каналов</p>
-                     <p class="item__content">20HD</p>
-                  </div>                  
-               </div>
-               <div class="tariffs__column-item-row2">
-                  <div class="tariffs__column-item-price">899</div>
-                  <span class="tariffs__column-item-span"><hr></span>
-                  <button class="tariffs__column-item-btn">Подключить</button>
-               </div>
+            <div class="tariffs__column-item-row2">
+               <div class="tariffs__column-item-price">899</div>
+               <span class="tariffs__column-item-span"><hr></span>
+               <button class="tariffs__column-item-btn btn">Подключить</button>
             </div>
-         </div>
-         <!--column3-->
-         <div class="tariffs__column">
-            <!--item 1-->
-            <div class="tariffs__column-item">
-               <div class="tariffs__column-item-subtitle">Объединяй!</div>
-               <div class="tariffs__column-item-row">
-                  <div class="tariffs__column-item-column">
-                     <img src="img/icon1.svg" alt="" class="item__logo1">
-                     <p class="item__content">До 100 Мбит/с</p>
-                  </div>
-                  <div class="tariffs__column-item-column">
-                     <img src="img/icon2.svg" alt="" class="item__logo1">
-                     <p class="item__content">140 каналов</p>
-                     <p class="item__content">20HD</p>
-                  </div>                  
+         </div> 
+         <!--item 4-->
+         <div class="tariffs__item">
+            <div class="tariffs__item-subtitle">Объединяй!</div>
+            <div class="tariffs__column-item-row">
+               <div class="tariffs__column-item-column">
+                  <img src="img/icon1.svg" alt="" class="item__logo1">
+                  <p class="item__content">До 100 Мбит/с</p>
                </div>
-               <div class="tariffs__column-item-row2">
-                  <div class="tariffs__column-item-price">899</div>
-                  <span class="tariffs__column-item-span"><hr></span>
-                  <button class="tariffs__column-item-btn">Подключить</button>
-               </div>
+               <div class="tariffs__column-item-column">
+                  <img src="img/icon2.svg" alt="" class="item__logo1">
+                  <p class="item__content">140 каналов</p>
+                  <p class="item__content">20HD</p>
+               </div>                  
             </div>
-            <!--item 2-->
-            <div class="tariffs__column-item">
-               <div class="tariffs__column-item-subtitle">Объединяй!</div>
-               <div class="tariffs__column-item-row">
-                  <div class="tariffs__column-item-column">
-                     <img src="img/icon1.svg" alt="" class="item__logo1">
-                     <p class="item__content">До 100 Мбит/с</p>
-                  </div>
-                  <div class="tariffs__column-item-column">
-                     <img src="img/icon2.svg" alt="" class="item__logo1">
-                     <p class="item__content">140 каналов</p>
-                     <p class="item__content">20HD</p>
-                  </div>                  
-               </div>
-               <div class="tariffs__column-item-row2">
-                  <div class="tariffs__column-item-price">899</div>
-                  <span class="tariffs__column-item-span"><hr></span>
-                  <button class="tariffs__column-item-btn">Подключить</button>
-               </div>
+            <div class="tariffs__column-item-row2">
+               <div class="tariffs__column-item-price">899</div>
+               <span class="tariffs__column-item-span"><hr></span>
+               <button class="tariffs__column-item-btn btn">Подключить</button>
             </div>
-            <!--item 3-->
-            <div class="tariffs__column-item">
-               <div class="tariffs__column-item-subtitle">Объединяй!</div>
-               <div class="tariffs__column-item-row">
-                  <div class="tariffs__column-item-column">
-                     <img src="img/icon1.svg" alt="" class="item__logo1">
-                     <p class="item__content">До 100 Мбит/с</p>
-                  </div>
-                  <div class="tariffs__column-item-column">
-                     <img src="img/icon2.svg" alt="" class="item__logo1">
-                     <p class="item__content">140 каналов</p>
-                     <p class="item__content">20HD</p>
-                  </div>                  
+         </div> 
+         <!--item 5-->
+         <div class="tariffs__item">
+            <div class="tariffs__item-subtitle">Объединяй!</div>
+            <div class="tariffs__column-item-row">
+               <div class="tariffs__column-item-column">
+                  <img src="img/icon1.svg" alt="" class="item__logo1">
+                  <p class="item__content">До 100 Мбит/с</p>
                </div>
-               <div class="tariffs__column-item-row2">
-                  <div class="tariffs__column-item-price">899</div>
-                  <span class="tariffs__column-item-span"><hr></span>
-                  <button class="tariffs__column-item-btn">Подключить</button>
-               </div>
+               <div class="tariffs__column-item-column">
+                  <img src="img/icon2.svg" alt="" class="item__logo1">
+                  <p class="item__content">140 каналов</p>
+                  <p class="item__content">20HD</p>
+               </div>                  
             </div>
-         </div>
-         
+            <div class="tariffs__column-item-row2">
+               <div class="tariffs__column-item-price">899</div>
+               <span class="tariffs__column-item-span"><hr></span>
+               <button class="tariffs__column-item-btn btn">Подключить</button>
+            </div>
+         </div> 
+         <!--item 6-->
+         <div class="tariffs__item">
+            <div class="tariffs__item-subtitle">Объединяй!</div>
+            <div class="tariffs__column-item-row">
+               <div class="tariffs__column-item-column">
+                  <img src="img/icon1.svg" alt="" class="item__logo1">
+                  <p class="item__content">До 100 Мбит/с</p>
+               </div>
+               <div class="tariffs__column-item-column">
+                  <img src="img/icon2.svg" alt="" class="item__logo1">
+                  <p class="item__content">140 каналов</p>
+                  <p class="item__content">20HD</p>
+               </div>                  
+            </div>
+            <div class="tariffs__column-item-row2">
+               <div class="tariffs__column-item-price">899</div>
+               <span class="tariffs__column-item-span"><hr></span>
+               <button class="tariffs__column-item-btn btn">Подключить</button>
+            </div>
+         </div> 
+         <!--item 7-->
+         <div class="tariffs__item">
+            <div class="tariffs__item-subtitle">Объединяй!</div>
+            <div class="tariffs__column-item-row">
+               <div class="tariffs__column-item-column">
+                  <img src="img/icon1.svg" alt="" class="item__logo1">
+                  <p class="item__content">До 100 Мбит/с</p>
+               </div>
+               <div class="tariffs__column-item-column">
+                  <img src="img/icon2.svg" alt="" class="item__logo1">
+                  <p class="item__content">140 каналов</p>
+                  <p class="item__content">20HD</p>
+               </div>                  
+            </div>
+            <div class="tariffs__column-item-row2">
+               <div class="tariffs__column-item-price">899</div>
+               <span class="tariffs__column-item-span"><hr></span>
+               <button class="tariffs__column-item-btn btn">Подключить</button>
+            </div>
+         </div> 
+         <!--item 8-->
+         <div class="tariffs__item">
+            <div class="tariffs__item-subtitle">Объединяй!</div>
+            <div class="tariffs__column-item-row">
+               <div class="tariffs__column-item-column">
+                  <img src="img/icon1.svg" alt="" class="item__logo1">
+                  <p class="item__content">До 100 Мбит/с</p>
+               </div>
+               <div class="tariffs__column-item-column">
+                  <img src="img/icon2.svg" alt="" class="item__logo1">
+                  <p class="item__content">140 каналов</p>
+                  <p class="item__content">20HD</p>
+               </div>                  
+            </div>
+            <div class="tariffs__column-item-row2">
+               <div class="tariffs__column-item-price">899</div>
+               <span class="tariffs__column-item-span"><hr></span>
+               <button class="tariffs__column-item-btn btn">Подключить</button>
+            </div>
+         </div> 
+         <!--item 9-->
+         <div class="tariffs__item">
+            <div class="tariffs__item-subtitle">Объединяй!</div>
+            <div class="tariffs__column-item-row">
+               <div class="tariffs__column-item-column">
+                  <img src="img/icon1.svg" alt="" class="item__logo1">
+                  <p class="item__content">До 100 Мбит/с</p>
+               </div>
+               <div class="tariffs__column-item-column">
+                  <img src="img/icon2.svg" alt="" class="item__logo1">
+                  <p class="item__content">140 каналов</p>
+                  <p class="item__content">20HD</p>
+               </div>                  
+            </div>
+            <div class="tariffs__column-item-row2">
+               <div class="tariffs__column-item-price">899</div>
+               <span class="tariffs__column-item-span"><hr></span>
+               <button class="tariffs__column-item-btn btn">Подключить</button>
+            </div>
+         </div>  
       </div>
-   </section>
-   
+   </section>   
    <script src="js/script.js"></script>  
 </body>
 </html>
