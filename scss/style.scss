@@ -21,8 +21,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
 body {
 	min-height: 100vh;	
 	font-family: 'Roboto', sans-serif;
-	min-height: 100vh;
-	position: relative;
+	min-height: 100vh;	
 	background: #E5E5E5;
 }
 
@@ -30,8 +29,8 @@ body {
 	background: url(/img/fon.png) no-repeat center;
 	background-size: cover;
 	min-height: 100vh;	
-	&:before {
-		display: none;
+	&.active:before {
+		display: block;
 		content: '';
 		position: absolute;
 		left: 0;
@@ -43,11 +42,14 @@ body {
 
 	&__top {		
 		height: 60px;
-		background-color: #ffffffb7;
+		background: rgba(248, 248, 248, 0.6);
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
 		margin-bottom: calc(50vh - 255px);
+	}
+	&__burger {
+		display: none;
 	}
 
 	
@@ -67,15 +69,18 @@ body {
 	}
 
 	&__menu {
+		position: relative;		
 		&-list {	
 			width: 500px;
-			margin: 0px 30px;
+			height: 60px;
+			align-items: center;			
 			display: flex;
 			justify-content: space-between;
 		}			
 	}
 
-	&__menu-btn {		
+	&__menu-btn {
+		max-width: 500px;		
 	}	
 
 	&__menu-btn a {
@@ -84,12 +89,16 @@ body {
 		color: #000;	
 	}
 
+	
+
 	&__menu-btn a:hover {
 		color: #3343E1;
 	}
 
 	&__menu-sublist {
+		display: none;
 		position: absolute;
+		left: -29px;
 		top: 60px;
 		width: 200px;		
 		background: #fff;				
@@ -97,9 +106,14 @@ body {
 		border-bottom-left-radius: 20px;
 		border-bottom-right-radius: 20px;
 	}
+	&__menu-sublist.active {
+		display: block;
+	}
 
-	&__menu-subitem {
-		padding: 8px 30px;		
+	&__menu-subitem a {
+		padding: 8px 30px;
+		display: block;
+		width: 100%;
 	}	
 
 	&__menu-subitem:hover {
@@ -112,8 +126,10 @@ body {
 	}
 	
 	
-	&__menu-subitem a:hover {		
-		color: #fff;				
+	&__menu-subitem a:hover {	
+		display: inline-block;
+		width: 100%;	
+		color: #fff;					
 	}
 
 	&__call-btn {
@@ -128,20 +144,21 @@ body {
 
 	&__bid {			
 		display: flex;		
-		flex-direction: column;				
-		margin: 0 auto;
+		flex-direction: column;		
 		align-items: center;		
 		background: #E1F1FF;
 		border-radius: 20px;
 		max-width: 750px;
+		margin: 0 auto;
+		padding: 40px 0 45px 0;
 	}
 	
 
 	&__bid-title {
-		margin: 40px 0 30px 0;
+		margin: 0px 0 30px 0;
 	}
 
-	&__bid-form {
+	&__bid-form {		
 		text-align: center;
 		width: 470px;		
 	}
@@ -174,9 +191,12 @@ body {
 		margin: 9px 0px;
 		font-size: 14px;
 		line-height: 16px;
-		color: #C4C4C4;
+		color: #000;
 		border-radius: 15px;
 		padding: 7px 0px 7px 10px;
+	}
+	&__bid-input-item:hover {
+		background: #fff;
 	}
 
 	&__bid-input-surely {
@@ -185,8 +205,7 @@ body {
 		margin: 3px 0 15px 0px;
 	}
 
-	&__bid-btn {
-		margin-bottom: 45px;
+	&__bid-btn {		
 		padding: 11px 40px;
 	}
 
@@ -214,26 +233,24 @@ body {
 				display: flex;
 				justify-content: space-between;
 			}			
+		}
+		&__menu-sublist {
+			left: -2px;
 		}		
 	}
 }
 
-@media (max-width: 780px) {
-	.header {
+@media (max-width: 770px) {
+	body.lock {
+		overflow: hidden;
+	}
+	.header {		
 		&__call-btn {
 			display: none;
 		}
 		&__call-media {
 			display: block;
-		}
-	}
-}
-
-@media (max-width: 730px) {
-	.header {
-		&__menu {
-			display: none;
-		}
+		}		
 		&__burger {
 			display: block;
 			position: relative;
@@ -246,8 +263,7 @@ body {
 				height: 2px;
 				left: 0;
 				top: 15px;
-				position: absolute;
-				/*Анимация для плавности палочек*/
+				position: absolute;				
 				transition: all 0.3s ease 0s;
 			}
 		}
@@ -258,8 +274,7 @@ body {
          position: absolute;
          width: 100%;
          height: 2px;
-         left: 0;
-         /*Анимация для плавности палочек*/
+         left: 0;         
          transition: all 0.3s ease 0s;
       }
 		&__burger:before {
@@ -272,15 +287,76 @@ body {
          transform: rotate(45deg);
          top: 9px;
       }
-      /*Делаем крестик за счет вращения+перемещаем в нужное место за счет топ*//
+      
       &__burger.active::after{
          transform: rotate(-45deg);
          top: 9px;
       }
-      /*Убираем среднюю полоску*/
+   
       &__burger.active span {
          transform: scale(0);
       }
+		&__menu {			
+			position: fixed;
+         top: -100%;
+         left: 0;
+         width: 100%;         
+         background: #E1F1FF;
+         padding: 0px 0 0 0;
+         transition: all 0.3s ease 0s;			    
+		}
+		&__menu.active {
+			position: fixed;
+         top: 0;
+         left: 0;
+         width: 100%; 
+			height: 100%;			        
+         background: #E1F1FF;
+         padding: 65px 0 0 0;  
+         transition: all 0.3s ease 0s;			       
+		}
+		&__menu-list {			
+			margin: 0 auto;
+			display: flex;
+			flex-direction: column;		
+		}
+		&__menu-btn {
+			background-color: #3343E1;
+			width: 50%;
+			text-align: center;
+			border-radius: 20px;			
+			color: #fff;
+			position: relative;
+		}
+		&__menu-btn a {
+			display: block;
+			padding: 20px 0;
+			color: #fff;
+			text-transform: uppercase;			
+		}
+		&__menu-btn a:hover {
+			color: #fff;
+		}
+		&__menu-btn:nth-child(2) {
+			margin: 30px 0;
+		}		
+		&__menu-subitem.active {
+			display: block;			
+		}	
+			
+	}
+}
+@media (max-width: 610px) {
+	.header {
+		&__bid {
+			max-width: 330px;
+		}
+		&__bid-form {
+			max-width: 300px;
+		}
+		&__bid-radio-sort {
+			margin: 0 10px;
+		}
 	}
 }
 /*================================*/
@@ -288,11 +364,11 @@ body {
 	background: #E5E5E5;
 	text-align: center;
 	margin: 0 250px;
-	padding-bottom: 55px;
+	padding: 20px 0 55px 0;
 	
 
 	&__title {
-		margin: 20px 0;
+		margin-bottom: 20px;
 	}
 
 	&__row {
@@ -306,6 +382,9 @@ body {
 		width: 32%;
 		margin-right: 1%;
 		margin-bottom: 20px;
+	}
+	&__item:nth-child(3n) {
+		margin-right: 0px;
 	}
 		
 
@@ -339,7 +418,7 @@ body {
 		display: block;
 				
 	}
-	&__column-item-span hr {
+	&__column-item-span {
 		align: center;
 		width: 20px;
 		color: #000;
@@ -372,10 +451,8 @@ body {
 /*==========media=================*/
 /*Карточки в разделе тарифы*/
 @media (max-width: 1220px) {
-	.tariffs {
-		&__title {
-			
-		}
+	.tariffs {		
+		margin: 0 230px;
 		&__row {
 			justify-content: center;
 		}
@@ -384,7 +461,44 @@ body {
 			flex-wrap: wrap;
 			padding: 0px 20px;
 		}
+		&__item{
+			margin-right: 2%;
+		}
+		&__item:nth-child(3n) {
+			margin-right: 2%;
+		}					
 	}	
+}
+
+@media (max-width: 970px) {
+	.tariffs {
+		margin: 0 150px;		
+		&__item {
+			margin-right: 2%;
+		}
+		&__item:nth-child(2n+2) {
+			margin-right: 2%;
+		}
+			
+	}
+}
+
+@media (max-width: 600px) {
+	.tariffs {	
+		margin: 0 70px;	
+		&__item {
+			margin-right: 0px;
+		}	
+	}
+}
+
+@media (max-width: 360px) {
+	.tariffs {	
+		margin: 0 70px;	
+		&__item {
+			margin-right: 0px;
+		}	
+	}
 }
 
 
