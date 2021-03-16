@@ -16,7 +16,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
    const home = document.getElementById('drop'),
          subBurgerBtn = document.querySelector('.header__menu-sublist'),
-         burgerBtn = document.getElementById('two'); 
+         burgerBtn = document.getElementById('two'),
+         burgerActive = document.querySelector('.header__menu');
+         console.log(burgerActive);
 
       home.addEventListener('click', (e) => {
       if (e.target === home) {
@@ -24,12 +26,34 @@ window.addEventListener('DOMContentLoaded', () => {
          home.classList.toggle('active');
          if (home.classList.contains('active')) {
             home.style.paddingBottom = '190px';
-         } else {
-            home.style.paddingBottom = '20px';
+         }         
+         else {
+            home.style.paddingBottom = '20px';            
          }
       }
       e.preventDefault();
    });
+
+   // home.addEventListener('mouseover', (e) => {
+   //    if (e.target === home) {
+   //       subBurgerBtn.classList.toggle('active'); 
+   //       home.classList.toggle('active');
+   //       if (home.classList.contains('active')) {
+   //          home.style.paddingBottom = '190px';
+   //       } 
+   //    }
+   // });
+
+   // home.addEventListener('mouseout', (e) => {            
+   //       if (e.target === home && e.relatedTarget === burgerActive) {
+   //          subBurgerBtn.classList.toggle('active'); 
+   //          home.classList.toggle('active');
+   //          if (!home.classList.contains('active')) {
+   //             home.style.paddingBottom = '20px';
+   //          } 
+         
+   //    }    
+   // });
    //бургер
 });
 
