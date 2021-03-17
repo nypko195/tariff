@@ -216,6 +216,7 @@ body {
 }
 
 .header__call-media {
+  cursor: pointer;
   display: none;
 }
 
@@ -268,6 +269,7 @@ body {
 }
 
 .header__bid-radio-el {
+  cursor: pointer;
   margin-right: 10px;
 }
 
@@ -334,7 +336,7 @@ body {
             justify-content: space-between;
   }
   .header__menu-sublist {
-    left: -2px;
+    left: 0px;
   }
 }
 
@@ -350,6 +352,7 @@ body {
   }
   .header__burger {
     display: block;
+    cursor: pointer;
     position: relative;
     width: 40px;
     height: 30px;
@@ -482,6 +485,9 @@ body {
 }
 
 .tariffs__row {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -498,7 +504,7 @@ body {
 }
 
 .tariffs__item:nth-child(3n) {
-  margin-right: 0px;
+  margin-right: 0%;
 }
 
 .tariffs__item-subtitle {
@@ -570,47 +576,111 @@ body {
 
 /*==========media=================*/
 /*Карточки в разделе тарифы*/
-@media (max-width: 1220px) {
+@media (max-width: 1200px) {
   .tariffs {
-    margin: 0 230px;
-  }
-  .tariffs__row {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    margin: 0 200px;
   }
   .tariffs__item {
     width: 235px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    padding: 0px 20px;
-  }
-  .tariffs__item {
-    margin-right: 2%;
+    margin-right: 1%;
   }
   .tariffs__item:nth-child(3n) {
-    margin-right: 2%;
+    margin-left: 0%;
+    margin-right: 0%;
   }
 }
 
-@media (max-width: 970px) {
+@media (max-width: 1175px) {
+  .tariffs__item {
+    margin-right: 1%;
+  }
+  .tariffs__item:nth-child(3n) {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+}
+
+@media (max-width: 1117px) {
+  .tariffs {
+    margin: 0 170px;
+  }
+  .tariffs__item {
+    margin-right: 0%;
+  }
+  .tariffs__item:nth-child(2n) {
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+  .tariffs__item:nth-last-child(2) {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 1051px) {
+  .tariffs {
+    margin: 0 170px;
+  }
+  .tariffs__item {
+    margin-right: 0%;
+  }
+  .tariffs__item:nth-child(2n) {
+    margin-left: 1%;
+    margin-right: 0%;
+  }
+  .tariffs__item:nth-last-child(2) {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  .tariffs__item:last-child {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 975px) {
   .tariffs {
     margin: 0 150px;
   }
   .tariffs__item {
-    margin-right: 2%;
+    margin-right: 0%;
   }
-  .tariffs__item:nth-child(2n+2) {
-    margin-right: 2%;
+  .tariffs__item:last-child {
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 775px) {
   .tariffs {
     margin: 0 70px;
   }
   .tariffs__item {
-    margin-right: 0px;
+    margin-right: 0%;
+  }
+  .tariffs__item:nth-child(2n) {
+    margin-left: 1%;
+  }
+  .tariffs__item:last-child {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 607px) {
+  .tariffs {
+    margin: 0 70px;
+  }
+  .tariffs__item {
+    margin-right: 0%;
+  }
+  .tariffs__item:nth-child(2n) {
+    margin-left: 0%;
+  }
+  .tariffs__item:last-child {
+    margin-bottom: 0;
   }
 }
 
