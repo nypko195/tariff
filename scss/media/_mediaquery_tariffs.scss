@@ -1,0 +1,67 @@
+/*=====tariffsr=====*/
+/*Карточки в разделе тарифы*/
+@media (max-width: 1400px) {
+	.tariffs {		
+		&__item {						
+			flex-wrap: wrap;
+			margin-right: 1%;
+		}		
+	}
+}
+
+@media (max-width: 1200px) {
+	.tariffs {
+		// margin: 0 200px;		
+		&__item {
+			width: 235px;		
+		}		
+		&__item:nth-child(-n+3) {		
+			margin-top: 20px;		
+		}
+		&__item:nth-child(-n+2) {		
+			margin-top: 0;		
+		}
+		&__item:nth-child(3n) {		
+			margin-right: 1%;	
+		}
+		&__item:nth-child(2n) {		
+			margin-right: 0%;	
+		}
+		&__item:last-child {		
+			margin-right: 0%;	
+		}	
+	}
+}
+
+@media (max-width: 992px) {
+	.tariffs {
+		margin: 0 145px;
+		&__item:nth-child(-n+2) {		
+			margin-top: 0;		
+		}				
+	}
+}
+
+@media (max-width: 768px) {
+	.tariffs {
+		margin: 0 50px;					
+	}
+}
+
+@media (max-width: 576px) {
+	.tariffs {
+		margin: 0 55px;
+		&__item {
+			margin-right: 0%;
+		}		
+		&__item:nth-child(-n+2) {		
+			margin-top: 20px;		
+		}
+		&__item:first-child {		
+			margin-top: 0px;		
+		}	
+		&__item:nth-child(2n) {		
+			margin-right: 0%;	
+		}			
+	}
+}

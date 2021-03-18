@@ -1,0 +1,94 @@
+.tariffs {
+	background: #E5E5E5;
+	text-align: center;
+	margin: 0 250px;
+	padding: 20px 0 55px 0;
+	
+
+	&__title {
+		margin-bottom: 20px;
+	}
+
+	&__row {	
+		justify-content: center;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__item {		
+		background-color: #fff;
+		border-radius: 20px;
+		width: 32%;
+		margin-right: 1%;
+		margin-top: 20px;
+	}
+	&__item:nth-child(-n+3) {		
+		margin-top: 0;		
+	}
+	&__item:nth-child(3n) {		
+		margin-right: 0;	
+	}
+	&__item:last-child {
+		margin-right: 0;
+	}
+
+	&__item-subtitle {
+		padding: 19px 0 22px 0;
+	}
+
+	&__column-item-row {
+		display: flex;
+		justify-content: center;
+		margin: 0 -15px;
+	}
+
+	&__column-item-column {
+		padding: 0 15px;
+	}
+	
+	&__column-item-row2 {
+		display: flex;		
+		align-items: center;		
+		justify-content: center;
+		margin-bottom: 27px;
+	}
+
+	&__column-item-price {
+		font-size: 34px;
+		line-height: 46px;
+	}
+
+	&__column-item-span {
+		display: block;
+				
+	}
+	&__column-item-span {
+		align: center;
+		width: 20px;
+		color: #000;
+		
+	}
+	&__column-item-span::before {
+		content: "руб";
+	}
+	&__column-item-span::after {
+		content: "мес";
+	}
+
+	&__column-item-btn {		
+		padding: 11px 20px;
+		
+		margin-left: 15px;
+	}
+}
+
+.item {
+
+	&__logo1 img {
+		width: 100%;
+	}
+
+	&__content {
+		padding: 10px 0 15px 0;
+	}	
+}

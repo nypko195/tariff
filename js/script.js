@@ -14,11 +14,9 @@ window.addEventListener('DOMContentLoaded', () => {
          }
       });
 
-   const home = document.getElementById('drop'),
-         subBurgerBtn = document.querySelector('.header__menu-sublist'),
-         burgerBtn = document.getElementById('two'),
-         burgerActive = document.querySelector('.header__menu');
-         console.log(burgerActive);
+   const home = document.getElementById('btn-1'),
+         subBurgerBtn = document.querySelector('.header__menu-sublist'),         
+         burgerActive = document.querySelector('.header__menu');         
 
       home.addEventListener('click', (e) => {
       if (e.target === home) {
@@ -55,41 +53,25 @@ window.addEventListener('DOMContentLoaded', () => {
    //    }    
    // });
    //бургер
+
+   //валидация
+   const btnPost = document.querySelector('.header__bid-btn'),
+         userTel = document.getElementById('input-1'),
+         userName = document.getElementById('input-2'),
+         userAdress = document.getElementById('input-3');
+
+      btnPost.addEventListener('click', (e) => {
+      function validationTel (user) {
+         let regTel = /\d/g;
+         if (!regTel.test(user)) {
+            console.log('Телефон не верен.');
+         } else {
+            console.log('+');
+         };
+      }
+      
+      validationTel(userTel);
+
+         e.preventDefault();
+      });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-   
-
-   
-
-
-
-
-
