@@ -3,11 +3,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
    //burger
    const burger = document.querySelector('.header__burger'),
+         burgerClick = document.querySelector('span'),
          burgerMenu = document.querySelector('.header__menu'),
          content = document.querySelector('body');
 
    burger.addEventListener('click', (e) => {
-      if (e.target === burger ) {
+      if (e.target ===  burger || e.target === burgerClick) {
             burger.classList.toggle('active');
             burgerMenu.classList.toggle('active');   
             content.classList.toggle('lock');
@@ -55,23 +56,39 @@ window.addEventListener('DOMContentLoaded', () => {
    //бургер
 
    //валидация
-   const btnPost = document.querySelector('.header__bid-btn'),
-         userTel = document.getElementById('input-1'),
-         userName = document.getElementById('input-2'),
-         userAdress = document.getElementById('input-3');
+   const form = document.querySelector('.header__bid-form');
+   const userTel = document.getElementById('input1'),
+         userName = document.getElementById('input2'),
+         userAdress = document.getElementById('input3');
 
-      btnPost.addEventListener('click', (e) => {
-      function validationTel (user) {
+         console.log(userTel);
+         
+
+      form.addEventListener('submit', (e) => {
+      function validationTel(user) {
          let regTel = /\d/g;
          if (!regTel.test(user)) {
             console.log('Телефон не верен.');
          } else {
             console.log('+');
-         };
+         }
       }
+      // let abs = /\d/g.test(userTel);
+      // console.log(abs);
+
+      // function validationName(name) {
+      //    let regName = /\w/g;
+      //    if(!regName.test(name)) {
+      //       console.log('-');
+      //    } else {
+      //       console.log('+');
+      //    }
+      // }
       
       validationTel(userTel);
+      // validationName(userName);
 
          e.preventDefault();
-      });
+   });   
 });
+

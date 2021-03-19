@@ -100,6 +100,8 @@ body {
   background: url(/img/fon.png) no-repeat center;
   background-size: cover;
   min-height: 100vh;
+  /*animation*/
+  /*animation*/
 }
 
 .header.active:before {
@@ -217,6 +219,7 @@ body {
 }
 
 .header__call-btn {
+  position: relative;
   font-size: 13px;
   line-height: 18px;
   padding: 11px 40px;
@@ -225,6 +228,48 @@ body {
 .header__call-btn:hover {
   -webkit-box-shadow: 0px 5px 50px 2px rgba(51, 67, 225, 0.5);
           box-shadow: 0px 5px 50px 2px rgba(51, 67, 225, 0.5);
+}
+
+.header__call-btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.2em;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.33)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.33) 0%, rgba(255, 255, 255, 0) 100%);
+  -webkit-box-shadow: 0px 5px 50px 2px rgba(199, 199, 199, 0.33);
+          box-shadow: 0px 5px 50px 2px rgba(199, 199, 199, 0.33);
+  -webkit-transform: translateX(-1.7em) translateY(-3em) skewX(135deg);
+          transform: translateX(-1.7em) translateY(-3em) skewX(135deg);
+}
+
+.header__call-btn:hover::before {
+  -webkit-animation: blick 1s;
+          animation: blick 1s;
+}
+
+@-webkit-keyframes blick {
+  from {
+    -webkit-transform: translateX(-1.7em) skewX(135deg);
+            transform: translateX(-1.7em) skewX(135deg);
+  }
+  to {
+    -webkit-transform: translateX(13em) skewX(135deg);
+            transform: translateX(13em) skewX(135deg);
+  }
+}
+
+@keyframes blick {
+  from {
+    -webkit-transform: translateX(-1.7em) skewX(135deg);
+            transform: translateX(-1.7em) skewX(135deg);
+  }
+  to {
+    -webkit-transform: translateX(13em) skewX(135deg);
+            transform: translateX(13em) skewX(135deg);
+  }
 }
 
 .header__call-media {
@@ -255,6 +300,13 @@ body {
 }
 
 .header__bid-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
   width: 470px;
 }
@@ -278,6 +330,9 @@ body {
 
 .header__bid-radio-text {
   line-height: 16px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
 }
 
 .header__bid-radio-el {
@@ -315,6 +370,8 @@ body {
 }
 
 .header__bid-btn {
+  margin: 0 auto;
+  max-width: 200px;
   padding: 11px 40px;
 }
 
@@ -391,10 +448,10 @@ body {
     transition: all 0.3s ease 0s;
   }
   .header__burger:before {
-    top: 0;
+    top: 0px;
   }
   .header__burger:after {
-    bottom: 0;
+    bottom: 0px;
   }
   .header__burger.active::before {
     -webkit-transform: rotate(45deg);

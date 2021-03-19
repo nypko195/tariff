@@ -51,7 +51,7 @@
 				top: 15px;
 				position: absolute;				
 				transition: all 0.3s ease 0s;
-			}
+			}			
 		}
 
 		&__burger:before,
@@ -65,10 +65,10 @@
          transition: all 0.3s ease 0s;
       }
 		&__burger:before {
-         top: 0;
+         top: 0px;
       }
 		&__burger:after {
-         bottom: 0;
+         bottom: 0px;
       }
 		&__burger.active::before {
          transform: rotate(45deg);
@@ -81,7 +81,7 @@
       }
    
       &__burger.active span {
-         transform: scale(0);
+			transform: scale(0);		
       }
 		&__menu {			
 			position: fixed;
@@ -136,9 +136,7 @@
 		}
 		&__menu-subitem a {
 			color: #000;
-		}
-
-			
+		}			
 	}
 }
 @media (max-width: 576px) {
