@@ -322,7 +322,6 @@ body {
 }
 
 .header__bid-radio {
-  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -333,6 +332,7 @@ body {
 }
 
 .header__bid-radio-sort {
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

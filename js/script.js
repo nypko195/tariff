@@ -1,7 +1,7 @@
 "use strict";
 window.addEventListener('DOMContentLoaded', () => { 
 
-   //burger
+   //burger//
    //открытие бургера
    const burger = document.querySelector('.header__burger'),
          burgerClick = document.querySelector('span'),
@@ -20,23 +20,33 @@ window.addEventListener('DOMContentLoaded', () => {
    //кнопка домашний интернет
    const home = document.getElementById('btn-1'),
          subBurgerBtn = document.querySelector('.header__menu-sublist'),         
-         headerBurger = document.querySelector('.header__burger');          
+         headerBurger = document.querySelector('.header__burger'); 
+   const abs = document.querySelectorAll('.header__menu-btn');         
 
       home.addEventListener('click', (e) => {
-      if (e.target === home) {
-         subBurgerBtn.classList.toggle('active');
-         home.classList.toggle('active');         
-         if (home.classList.contains('active') && headerBurger.classList.contains('active')) {
-            home.style.paddingBottom = '190px';
-         }         
-         else {
-            home.style.paddingBottom = '20px';            
-         }
-      }
+      // if (e.target === home) {
+      //    subBurgerBtn.classList.toggle('active');
+      //    home.classList.toggle('active');         
+      //    if (home.classList.contains('active') && headerBurger.classList.contains('active')) {
+      //       home.style.paddingBottom = '190px';
+      //    }         
+      //    else {
+      //       home.style.paddingBottom = '20px';            
+      //    }
+      // }
+
+         if (e.target === home) {
+            subBurgerBtn.classList.toggle('active');
+            home.classList.toggle('active');
+            if (home.classList.contains('active') && headerBurger.classList.contains('active')) {
+               abs[0].style.height = '230px';
+            }
+         }   
+
       e.preventDefault();
    });
 
-   //валидация
+   //валидация//
    const form = document.querySelector('.header__bid-form');
    const userTel = document.getElementById('input1'),
          userName = document.getElementById('input2'),
@@ -74,7 +84,12 @@ window.addEventListener('DOMContentLoaded', () => {
          name.classList.remove('novalid');
          name.classList.add('valid');
       }
-   }  
+   }
+   
+
+   //карточка//
+
+   
    
    
 });

@@ -174,14 +174,14 @@ body {
 		width: 470px;		
 	}
 
-	&__bid-radio {	
-		cursor: pointer;		
+	&__bid-radio {				
 		display: flex;	
 		justify-content: space-between;
 		margin-bottom: 23px;
 		
 	}
-	&__bid-radio-sort {		
+	&__bid-radio-sort {
+		cursor: pointer;			
 		display: flex;
 		margin: 0 45px;
 	}
