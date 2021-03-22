@@ -59,36 +59,40 @@ window.addEventListener('DOMContentLoaded', () => {
    const form = document.querySelector('.header__bid-form');
    const userTel = document.getElementById('input1'),
          userName = document.getElementById('input2'),
-         userAdress = document.getElementById('input3');
-
-         console.log(userTel);
+         userAdress = document.getElementById('input3');       
          
 
-      form.addEventListener('submit', (e) => {
+   form.addEventListener('submit', (e) => {
       function validationTel(user) {
-         let regTel = /\d/g;
-         if (!regTel.test(user)) {
-            console.log('Телефон не верен.');
+         /*const regTel = /\d/g;*/
+         const regTel = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
+         if (!regTel.test(user.value)) {
+            user.classList.add('novalid');
+            console.log('-');            
          } else {
             console.log('+');
+            user.classList.remove('novalid');
+            user.classList.add('valid');
          }
       }
-      // let abs = /\d/g.test(userTel);
-      // console.log(abs);
+      
 
-      // function validationName(name) {
-      //    let regName = /\w/g;
-      //    if(!regName.test(name)) {
-      //       console.log('-');
-      //    } else {
-      //       console.log('+');
-      //    }
-      // }
+      function validationName(name) {
+         const regName = /\w\D/g;
+         if(!regName.test(name.value)) {
+            console.log('-');
+            name.classList.add('novalid');
+         } else {
+            console.log('+');
+            name.classList.remove('novalid');
+            name.classList.add('valid');
+         }
+      }  
       
       validationTel(userTel);
-      // validationName(userName);
+      validationName(userName);      
 
-         e.preventDefault();
+      e.preventDefault();
    });   
 });
 
