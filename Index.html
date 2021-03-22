@@ -53,14 +53,14 @@
          <h2 class="header__bid-title title">Заявка на подключение</h2>
          <form method="POST" action="name" class="header__bid-form" autocomplete="off">
             <label for="" class="header__bid-radio">
-               <div class="header__bid-radio-sort">
-                  <input type="radio" name="choice" class="header__bid-radio-el" checked>
-                  <p class="header__bid-radio-text">В квартиру</p>
-               </div>
-               <div class="header__bid-radio-sort">
+               <label class="header__bid-radio-sort" >
+                  <input type="radio" name="choice" class="header__bid-radio-el" checked="true">
+                  В квартиру
+               </label>
+               <label class="header__bid-radio-sort">
                   <input type="radio" name="choice" class="header__bid-radio-el">
-                  <p class="header__bid-radio-text">В частный дом/офис</p>
-               </div>             
+                  В частный дом/офис
+               </label>             
             </label>            
                <input type="tel" name="phone"  class="header__bid-input-item" placeholder="Ваш телефон*" tabindex="1" id="input1">
                <input type="text" name="name" class="header__bid-input-item" placeholder="Ваше имя" tabindex="2" id="input2">

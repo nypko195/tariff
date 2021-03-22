@@ -111,6 +111,7 @@ body {
 	}
 
 	&__call-btn {
+		overflow: hidden;
 		position: relative;
 		font-size: 13px;
 		line-height: 18px;
@@ -173,7 +174,8 @@ body {
 		width: 470px;		
 	}
 
-	&__bid-radio {			
+	&__bid-radio {	
+		cursor: pointer;		
 		display: flex;	
 		justify-content: space-between;
 		margin-bottom: 23px;

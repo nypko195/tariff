@@ -228,6 +228,7 @@ body {
 }
 
 .header__call-btn {
+  overflow: hidden;
   position: relative;
   font-size: 13px;
   line-height: 18px;
@@ -321,6 +322,7 @@ body {
 }
 
 .header__bid-radio {
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
