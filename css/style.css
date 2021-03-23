@@ -500,6 +500,9 @@ body {
     transition: all 0.3s ease 0s;
   }
   .header__menu-list {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
     margin: 0 auto;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -508,6 +511,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    height: 100%;
   }
   .header__menu-btn {
     background-color: #3343E1;

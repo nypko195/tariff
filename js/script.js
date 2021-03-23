@@ -11,40 +11,48 @@ window.addEventListener('DOMContentLoaded', () => {
    burger.addEventListener('click', (e) => {
       if (e.target ===  burger || e.target === burgerClick) {
             burger.classList.toggle('active');
-            burgerMenu.classList.toggle('active');   
+            burgerMenu.classList.toggle('active');               
             content.classList.toggle('lock');
-         }
+         } 
       });
 
    
    //кнопка домашний интернет
    const home = document.getElementById('btn-1'),
-         subBurgerBtn = document.querySelector('.header__menu-sublist'),         
-         headerBurger = document.querySelector('.header__burger'); 
+         subBurgerBtn = document.querySelector('.header__menu-sublist');          
    const abs = document.querySelectorAll('.header__menu-btn');         
 
       home.addEventListener('click', (e) => {
-      // if (e.target === home) {
-      //    subBurgerBtn.classList.toggle('active');
-      //    home.classList.toggle('active');         
-      //    if (home.classList.contains('active') && headerBurger.classList.contains('active')) {
-      //       home.style.paddingBottom = '190px';
-      //    }         
-      //    else {
-      //       home.style.paddingBottom = '20px';            
-      //    }
-      // }
+         // if (e.target === home) {
+         //    subBurgerBtn.classList.toggle('active');
+         //    home.classList.toggle('active');         
+         //    if (home.classList.contains('active') && headerBurger.classList.contains('active')) {
+         //       home.style.paddingBottom = '190px';
+         //    }         
+         //    else {
+         //       home.style.paddingBottom = '20px';            
+         //    }
+         // }
 
          if (e.target === home) {
             subBurgerBtn.classList.toggle('active');
             home.classList.toggle('active');
-            if (home.classList.contains('active') && headerBurger.classList.contains('active')) {
+            if (home.classList.contains('active')  && burger.classList.contains('active')) {
                abs[0].style.height = '230px';
-            }
-         }   
+            } else {
+               abs[0].style.height = 'auto';
+            } 
+      }       
 
       e.preventDefault();
    });
+
+      // home.addEventListener('click', (e) => {
+      //    if(e.target && subBurgerBtn.classList.contains('active') && burger.classList.contains('active')) {
+      //       subBurgerBtn.classList.remove('active'); 
+      //       abs[0].style.height = 'auto';           
+      //    }
+      // });
 
    //валидация//
    const form = document.querySelector('.header__bid-form');
@@ -88,9 +96,6 @@ window.addEventListener('DOMContentLoaded', () => {
    
 
    //карточка//
-
-   
-   
    
 });
 

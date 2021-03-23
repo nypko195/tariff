@@ -102,10 +102,12 @@
          padding: 65px 0 0 0;  
          transition: all 0.3s ease 0s;			       
 		}
-		&__menu-list {			
+		&__menu-list {	
+			justify-content: start;		
 			margin: 0 auto;
 			display: flex;
-			flex-direction: column;		
+			flex-direction: column;	
+			height: 100%;
 		}
 		&__menu-btn {
 			background-color: #3343E1;
