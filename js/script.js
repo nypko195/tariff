@@ -92,10 +92,59 @@ window.addEventListener('DOMContentLoaded', () => {
          name.classList.remove('novalid');
          name.classList.add('valid');
       }
-   }
-   
+   } 
 
    //карточка//
+   function cards() {
+      class MenuCаrd {
+         constructor(subtitle, icon1, text1, icon2, text2, price, btn, parentSelector, ...classes) {
+            this.subtitle = subtitle;
+            this.icon1 = icon1;
+            this.text1 = text1;
+            this.icon2 = icon2;
+            this.text2 = text2;
+            this.price = price;
+            this.btn = btn;
+            this.parent = document.querySelector(parentSelector);
+            this.classes = classes;
+         }
+         render() {
+            const tariffCard = document.createElement('div');            
+            if(this.classes.length === 0) {
+               this.tariffCard = 'tariffs__item';
+               tariffCard.classList.add(this.tariffCard);
+            }  
+            tariffCard.innerHTML = `
+               <h3 class="tariffs__item-subtitle">${this.subtitle}</h3>
+               <div class="tariffs__column-item-row">
+                  <div class="tariffs__column-item-column">
+                     <img src="${this.icon1}" alt="" class="item__logo1">
+                     <p class="item__content">${this.text1}</p>
+                  </div>
+                  <div class="tariffs__column-item-column">
+                     <img src="${this.icon2}" alt="" class="item__logo1">                  
+                     <p class="item__content">${this.text2}</p>
+                  </div>                  
+               </div>
+               <hr>
+               <div class="tariffs__column-item-row2">
+                  <div class="tariffs__column-item-price">${this.price}</div>                  
+                  <button class="tariffs__column-item-btn btn">${this.btn}</button>
+               </div>
+               </div>  
+               `;
+            this.parent.append(tariffCard);
+         }
+      }
+
+      axios.get('http://localhost:3000/carta')
+      .then(data => {
+         data.data.forEach(({subtitle, icon1, text1, icon2, text2, price, btn}) => {
+            new MenuCаrd(subtitle, icon1, text1, icon2, text2, price, btn, '.tariffs__row').render();
+         });
+      }); 
+   }
    
+   cards();  
 });
 
