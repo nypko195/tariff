@@ -6,23 +6,23 @@ window.addEventListener('DOMContentLoaded', () => {
    const burger = document.querySelector('.header__burger'),
          burgerClick = document.querySelector('span'),
          burgerMenu = document.querySelector('.header__menu'),
+         burgerBg = document.querySelector('.header__menu-list'),
          content = document.querySelector('body');
-
+   //показываем
    burger.addEventListener('click', (e) => {
       if (e.target ===  burger || e.target === burgerClick) {
             burger.classList.toggle('active');
             burgerMenu.classList.toggle('active');               
-            content.classList.toggle('lock');
+            content.classList.toggle('lock');   
          } 
       });
 
-   
    //кнопка домашний интернет
    const home = document.getElementById('btn-1'),
          subBurgerBtn = document.querySelector('.header__menu-sublist');          
-   const abs = document.querySelectorAll('.header__menu-btn');         
-
-      home.addEventListener('click', (e) => {
+   const menuBtn = document.querySelectorAll('.header__menu-btn');
+   
+         home.addEventListener('click', (e) => {
          // if (e.target === home) {
          //    subBurgerBtn.classList.toggle('active');
          //    home.classList.toggle('active');         
@@ -32,27 +32,30 @@ window.addEventListener('DOMContentLoaded', () => {
          //    else {
          //       home.style.paddingBottom = '20px';            
          //    }
-         // }
-
+         
+      
          if (e.target === home) {
             subBurgerBtn.classList.toggle('active');
             home.classList.toggle('active');
-            if (home.classList.contains('active')  && burger.classList.contains('active')) {
-               abs[0].style.height = '230px';
+            if (home.classList.contains('active') && burger.classList.contains('active')) {
+               menuBtn[0].style.height = '230px';
             } else {
-               abs[0].style.height = 'auto';
-            } 
-      }       
+               menuBtn[0].style.height = 'auto';
+            }
+         }
+         
+         //чистка кнопки
+         window.addEventListener('resize', () => {
+            if (screen.width > 768 ) {
+               menuBtn[0].style.height = 'auto';
+               //subBurgerBtn.classList.remove('active'); 
+               burgerMenu.classList.remove('active');
+               burger.classList.remove('active');                      
+            }
+         });
 
       e.preventDefault();
-   });
-
-      // home.addEventListener('click', (e) => {
-      //    if(e.target && subBurgerBtn.classList.contains('active') && burger.classList.contains('active')) {
-      //       subBurgerBtn.classList.remove('active'); 
-      //       abs[0].style.height = 'auto';           
-      //    }
-      // });
+   });          
 
    //валидация//
    const form = document.querySelector('.header__bid-form');
