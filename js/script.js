@@ -35,25 +35,25 @@ window.addEventListener('DOMContentLoaded', () => {
          
       
          if (e.target === home) {
+            menuBtn[0].style.height = 'auto';
             subBurgerBtn.classList.toggle('active');
             home.classList.toggle('active');
             if (home.classList.contains('active') && burger.classList.contains('active')) {
                menuBtn[0].style.height = '230px';
-            } else {
-               menuBtn[0].style.height = 'auto';
-            }
+            }           
          }
          
          //чистка кнопки
          window.addEventListener('resize', () => {
-            if (screen.width > 768 ) {
-               menuBtn[0].style.height = 'auto';
-               //subBurgerBtn.classList.remove('active'); 
+            if (screen.width > 769 ) {
+               menuBtn[0].style.height = 'auto';               
                burgerMenu.classList.remove('active');
-               burger.classList.remove('active');                      
-            }
+               burger.classList.remove('active');              
+            } else if (screen.width < 768 ) {
+               menuBtn[0].style.height = '230px';               
+            }            
          });
-
+      
       e.preventDefault();
    });          
 
